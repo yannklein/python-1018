@@ -1,19 +1,16 @@
 student = {
-  'name': 'Joseph',
-  'age': 21,
-  'nationality': "USA"
+  'name': 'Jaylon',
+  'age': 27,
+  'nationality': "France"
 }
 
-print(student)
-
-# useful fonction on dict
+# Dict manipulation
 print(len(student))
-print('name' in student)
-print('job' in student)
-print('Joseph' in student) # only taking into account the keys
-print(student.keys())
-print(student.values())
-print(student.items())
+print("name" in student) # True, only searching within the keys
+print("Jaylon" in student) # False, only searching within the keys
+print(list(student.keys()))
+print(list(student.values()))
+print(list(student.items()))
 
 #CRUD
 
@@ -22,18 +19,20 @@ student["job"] = "Data Scientist"
 print(student)
 
 # Read
-print(student["job"])
+print(student["name"])
+# print(student["hobby"])
+print(student.get("name"))
+print(student.get("hobby"))
+print(student.get("hobby", "Not found"))
 
 # Update
-student["job"] = "Unemployed"
-print(student["job"])
-
-# Delete
-del student["job"]
+student["job"] = "Super Data Scientist"
 print(student)
 
-print(student.get("job", "Unknown job"))
-print(student.get("name", "Unknown name"))
+# Delete
+del student["job"] 
+print(student)
 
+# Iteration
 for key, value in student.items():
-  print(key + " - " + str(value))
+  print(f'{key} -- {value}')

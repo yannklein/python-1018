@@ -1,15 +1,16 @@
-# we are defining the variable age, we are assigning the user input to it
-age = int(input("What's your age? "))
+# define an age variable and assign the user input into it
+age = int(input("How old are you? "))
 
-# print the age
 print(age)
 
-# re-assign the variable age
+# Concatenation
+print( "You are " + str(age) + " years-old.")
+
+# Interpolation (f formatting)
+print(f'You are {age} years-old.')
+
+# re-assigning age, incrementing it
 # age = age + 1
 age += 1
 
-# concatenation
-# print("Next year, you will be " + str(age) + " years-old!")
-
-# interpolation
-print(f"Next year, you will be {age} years-old!")
+print(f'You will be {age} years-old next year.')

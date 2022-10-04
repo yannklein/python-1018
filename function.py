@@ -1,7 +1,14 @@
-def is_even(number=0):
-    return number % 2 == 0
+# def even_or_odd(num):
+#     if num % 2 == 0:
+#         return 'even'
+#     else:
+#         return 'odd'
 
-print(is_even(number=32))
-print(is_even(number=1))
-print(is_even(number=10))
-print(is_even(number=11))
+# ternary operator version
+def even_or_odd(num):
+    return 'even' if num % 2 == 0 else 'odd'
+    
+print(even_or_odd(2))
+print(even_or_odd(3))
+print(even_or_odd(4))
+print(even_or_odd(5))
